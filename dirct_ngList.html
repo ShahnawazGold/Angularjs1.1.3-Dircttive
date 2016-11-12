@@ -1,0 +1,69 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!--<script src="script/script.js"></script>-->
+<script src="scripts/ng_list.js"></script>
+
+</head>
+<body ng-app="myModel" >
+
+<p>Try to change the names.</p>
+
+<!--<div  ng-controller="myController">-->
+
+
+
+<div ng-controller="myController">
+
+
+
+
+
+
+<form name="myForm" >
+ <label>List: <input name="namesInput" ng-model="names" ng-list required></label>
+ <span role="alert">
+   <span class="error" ng-show="myForm.namesInput.$error.required">
+   Required!</span>
+ </span>
+ <br>
+ <tt>names = {{names}}</tt><br/>
+ <tt>myForm.namesInput.$valid = {{myForm.namesInput.$valid}}</tt><br/>
+ <tt>myForm.namesInput.$error = {{myForm.namesInput.$error}}</tt><br/>
+ <tt>myForm.$valid = {{myForm.$valid}}</tt><br/>
+ <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br/>
+</form>
+
+
+
+
+
+</div>
+
+
+<!--</div>-->
+
+
+</body>
+</html>

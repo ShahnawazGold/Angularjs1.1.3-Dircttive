@@ -1,0 +1,46 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!--<script src="script/script.js"></script>-->
+<script src="scripts/ngchange.js"></script>
+
+</head>
+<body ng-app="myModel" >
+
+<p>Try to change the names.</p>
+
+<!--<div  ng-controller="myController">-->
+
+
+
+<div ng-controller="myController">
+
+
+
+<label>Check me to check both: <input type="checkbox" ng-model="master"></label><br/>
+<input id="checkSlave" type="checkbox" ng-checked="master" aria-label="Slave input">
+
+
+</div>
+
+
+<!--</div>-->
+
+
+</body>
+</html>

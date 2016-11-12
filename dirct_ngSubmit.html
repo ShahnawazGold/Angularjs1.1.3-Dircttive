@@ -1,0 +1,36 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!--<script src="script/script.js"></script>-->
+<script src="scripts/ng_submit.js"></script>
+
+</head>
+<body ng-app="myModel" >
+
+<p>Try to change the names.</p>
+
+<div  ng-controller="myController">
+
+
+
+
+<form ng-submit="submit()" >
+  Enter text and hit enter:
+  <input type="text" ng-model="text" name="text" />
+  <input type="submit" id="submit" value="Submit" />
+  <pre>list={{list}}</pre>
+</form>
+
+
+</div>
+
+
+</body>
+</html>

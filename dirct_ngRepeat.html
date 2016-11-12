@@ -1,0 +1,76 @@
+
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!--<script src="script/script.js"></script>-->
+<script src="scripts/ngchange.js"></script>
+
+</head>
+<body ng-app="myModel" >
+
+<p>Try to change the names.</p>
+
+<!--<div  ng-controller="myController">-->
+
+
+
+<div ng-controller="myController">
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!--<script src="script/script.js"></script>-->
+<script src="scripts/ng_repeat.js"></script>
+
+</head>
+<body ng-app="myModel" >
+
+<p>Try to change the names.</p>
+
+<!--<div  ng-controller="myController">-->
+
+
+
+<div ng-controller="myController">
+
+
+
+
+ I have {{friends.length}} friends. They are:
+  <input type="search" ng-model="q" placeholder="filter friends..." aria-label="filter friends" />
+  <ul class="example-animate-container">
+    <li class="animate-repeat" ng-repeat="friend in friends | filter:q as results">
+      [{{$index + 1}}] {{friend.name}} who is {{friend.age}} years old.
+    </li>
+    <li class="animate-repeat" ng-if="results.length === 0">
+      <strong>No results found...</strong>
+    </li>
+  </ul>
+
+
+</div>
+
+
+<!--</div>-->
+
+
+
+
+
+
+</body>
+</html>

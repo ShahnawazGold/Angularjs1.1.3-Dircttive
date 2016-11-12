@@ -1,0 +1,60 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!--<script src="script/script.js"></script>-->
+<script src="scripts/ngchange.js"></script>
+
+</head>
+<body ng-app="myModel" >
+
+<p>Try to change the names.</p>
+
+<!--<div  ng-controller="myController">-->
+
+
+
+<div ng-controller="myController">
+
+
+
+
+
+<input ng-copy="copied=true" ng-init="copied=true; value='copy me'" ng-model="value">
+copied: {{copied}}
+
+
+
+<!--cut ng here-->
+<input ng-cut="cut=true" ng-init="cut=false; value='cut me'" ng-model="value">
+cut: {{cut}}
+
+
+
+
+
+
+</div>
+
+
+<!--</div>-->
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="script/script.js"></script>
+<script src="scripts/ang_sorting.js"></script>
+
+</head>
+<body ng-app="myModel" >
+
+<p>Try to change the names.</p>
+
+<div  ng-controller="myController">
+    order by :<select ng-model="sortCloum">
+             <option value= "name"> Name ASC</option>
+             <option value= "gender"> Gender ASC</option>
+             <option value= "dateOfBirth"> Date of birth ASC</option>
+             <option value= "salary"> Salary ASC</option>
+          </select>
+<br/><br/>
+
+
+ <table>
+<thead>
+        <tr>   <th>name</th>
+                <th> Date of Birth</th>
+                <th>Gender</th>
+                <th> Salary</th>
+               
+        </tr>
+
+</thead>
+ <tbody>
+            <tr ng-repeat=" employee in employees |orderBy :sortCloum"> 
+
+              <td>{{employee.name | uppercase}}</td>
+              <td>{{employee.dateOfBirth }</td>
+              <td>{{employee.gender | lowercase}}</td>
+              <td>{{employee.salary |number :2}}</td>
+              <td>{{employee.salary |currency:$ :1}}</td>
+             
+             
+            </tr>
+ </tbody>
+ </table>
+</div>
+
+
+</body>
+</html>

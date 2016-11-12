@@ -1,0 +1,53 @@
+
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+
+
+</head>
+<body  >
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!--<script src="script/script.js"></script>-->
+<script src="scripts/ang_from2.js"></script>
+<p>Try to change the names.</p>
+
+<div  ng-app="myApp" ng-controller="myController">
+
+<from>
+
+    name <input type="text" ng-model="name" name="name"/>
+
+    fulname name :<input type="text" ng-model="fname" name="fname"/>
+    
+    <input type="button" value="submit" ng-click="insertData()"/>
+
+</from>
+
+ <table>
+<thead>
+        <tr>   <th>name</th>
+                <th> full name </th>
+                
+               
+        </tr>
+
+</thead>
+ <tbody>
+            <tr ng-repeat="user in data "> 
+
+                <td>{{user.name }}</td>
+                <td>{{user.fname }}</td>
+                
+            </tr>
+ </tbody>
+ </table>
+
+
+</div>
+
+
+</body>
+</html>

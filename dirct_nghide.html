@@ -1,0 +1,74 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!--<script src="script/script.js"></script>-->
+<script src="scripts/ngchange.js"></script>
+
+</head>
+<body ng-app="myModel" >
+
+<p>Try to change the names.</p>
+
+<!--<div  ng-controller="myController">-->
+
+
+
+<div ng-controller="myController">
+
+
+
+
+
+
+
+
+
+Click me: <input type="checkbox" ng-model="checked" aria-label="Toggle ngShow"><br/>
+<div>
+  Show:
+  <div class="check-element animate-hide" ng-show="checked">
+    <span class="glyphicon glyphicon-thumbs-up"></span> I show up when your checkbox is checked.
+  </div>
+</div>
+<div>
+  Hide:
+  <div class="check-element animate-hide" ng-hide="checked">
+    <span class="glyphicon glyphicon-thumbs-down"></span> I hide when your checkbox is checked.
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<!--</div>-->
+
+
+</body>
+</html>

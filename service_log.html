@@ -1,0 +1,35 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!--<script src="script/script.js"></script>-->
+<script src="scripts/ser_log.js"></script>
+
+</head>
+<body ng-app="myModel" >
+
+<p>Try to change the names.</p>
+
+<div  ng-controller="myController">
+
+ <p>Reload this page with open console, enter text and hit the log button...</p>
+  <label>Message:
+  <input type="text" ng-model="message" /></label>
+  <button ng-click="$log.log(message)">log</button>
+  <button ng-click="$log.warn(message)">warn</button>
+  <button ng-click="$log.info(message)">info</button>
+  <button ng-click="$log.error(message)">error</button>
+  <button ng-click="$log.debug(message)">debug</button
+
+
+</div>
+
+
+</body>
+</html>

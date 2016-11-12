@@ -1,0 +1,38 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!--<script src="script/script.js"></script>-->
+<script src="scripts/ang_form.js"></script>
+
+</head>
+<body  >
+
+<p>Try to change the names.</p>
+
+<div  ng-app="myApp" ng-controller="myController">
+
+<from>
+
+   
+    first name :<input type="text" ng-model="name"/>
+    last name <input type="text" ng-model="fname"/>
+    
+    <input type="button" value="submit" ng-click="insertData()"/>
+
+</from>
+
+
+</div>
+
+
+</body>
+</html>

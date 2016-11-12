@@ -1,0 +1,38 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!--<script src="script/script.js"></script>-->
+<script src="scripts/ng_switch.js"></script>
+
+</head>
+<body ng-app="myModel" >
+
+<p>Try to change the names.</p>
+
+<div  ng-controller="myController">
+
+
+ <select ng-model="selection" ng-options="item for item in items">
+  </select>
+  <code>selection={{selection}}</code>
+  <hr/>
+  <div class="animate-switch-container"
+    ng-switch on="selection">
+      <div class="animate-switch" ng-switch-when="settings|options" ng-switch-when-separator="|">Settings Div</div>
+      <div class="animate-switch" ng-switch-when="home">Home Span</div>
+      <div class="animate-switch" ng-switch-default>default</div>
+  </div>
+
+
+</div>
+
+
+</body>
+</html>

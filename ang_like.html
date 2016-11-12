@@ -1,0 +1,48 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="script/script.js"></script>
+<script src="scripts/ang_like.js"></script>
+
+</head>
+<body ng-app="myModel" >
+
+<p>Try to change the names.</p>
+
+<div  ng-controller="myController">
+
+ <table>
+<thead>
+        <tr>   <th>name</th>
+                <th> Likes</th>
+                <th>dislikes</th>
+                <th> like/dislike</th>
+        </tr>
+
+</thead>
+ <tbody>
+            <tr ng-repeat=" technology in technologies"> 
+
+              <td>{{technology.name}}</td>
+              <td>{{technology.likes}}</td>
+              <td>{{technology.dislikes}}</td>
+
+               <td><input type="button" value="like" ng-click="incrementLikes(technology)">
+                    <input type="button" value="dislike" ng-click="incrementDislikes(technology)">
+               </td>
+             
+            </tr>
+ </tbody>
+ </table>
+</div>
+
+
+</body>
+</html>

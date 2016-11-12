@@ -1,0 +1,36 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!--<script src="script/script.js"></script>-->
+<script src="scripts/ser_interval.js"></script>
+
+</head>
+<body ng-app="myModel" >
+
+<p>Try to change the names.</p>
+
+<div  ng-controller="myController">
+
+
+ <label>Date format: <input ng-model="format"></label> <hr/>
+    Current time is: <span my-current-time="format"></span>
+    <hr/>
+    Blood 1 : <font color='red'>{{blood_1}}</font>
+    Blood 2 : <font color='red'>{{blood_2}}</font>
+    <button type="button" data-ng-click="fight()">Fight</button>
+    <button type="button" data-ng-click="stopFight()">StopFight</button>
+    <button type="button" data-ng-click="resetFight()">resetFight</button>
+
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="script/script.js"></script>
+<script src="scripts/ang_hide.js"></script>
+
+
+</head>
+<body ng-app="myModel" >
+
+<div  ng-controller="myController">
+
+<!--<input type="text" placeholder="Search employees" ng-model="searchText"/>-->
+<input  ng-model="hideSalary" type="checkbox"/> Hide salry
+
+
+<br/><br/>
+
+
+ <table>
+<thead>
+        <tr>   <th>Name</th>
+                <th>Gender </th>
+                <th ng-hide="!hideSalary">Salary</th>
+                 <th ng-show="!hideSalary">Salary</th>
+                <th> City</th>
+               
+        </tr>
+
+</thead>
+ <tbody>
+            <tr ng-repeat=" employee in employees |filter:searchText"> 
+
+                <td>{{employee.name | uppercase}}</td>
+                <td>{{employee.gender }}</td>
+                <td ng-hide="hideSalary">{{employee.salary | lowercase}}</td>
+                <td ng-show="hideSalary">###</td>
+                <td>{{employee.city }}</td> 
+            </tr>
+ </tbody>
+ </table>
+</div>
+
+
+</body>
+</html>

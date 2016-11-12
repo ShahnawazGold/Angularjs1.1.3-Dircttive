@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html  >
+ <head>   
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!--<script src="script/script.js"></script>-->
+<script src="scripts/input_radio.js"></script>
+
+</head>
+<body ng-app="myModel" >
+
+<p>Try to change the names.</p>
+
+<!--<div  ng-controller="myController">-->
+
+
+
+<div ng-controller="myController">
+
+  <form name="myForm" >
+  <label>
+    <input type="radio" ng-model="color.name" value="red">
+    Red
+  </label><br/>
+  <label>
+    <input type="radio" ng-model="color.name" ng-value="specialValue">
+    Green
+  </label><br/>
+  <label>
+    <input type="radio" ng-model="color.name" value="blue">
+    Blue
+  </label><br/>
+  <tt>color = {{color.name | json}}</tt><br/>
+ </form>
+</div>
+
+
+<!--</div>-->
+
+
+</body>
+</html>
